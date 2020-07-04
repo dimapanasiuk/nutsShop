@@ -4,9 +4,11 @@ import {
   thirdCategoryContent,
   fourthCategoryContent,
   fifthCategoryContent,
+  productContent,
+  productContentOne,
 } from "./popupContent.mjs";
 
-const content = {
+const categoryContent = {
   "category-first": firstCategoryContent,
   "category-second": secondCateContent,
   "category-third": thirdCategoryContent,
@@ -14,16 +16,30 @@ const content = {
   "category-fifth": fifthCategoryContent,
 };
 
+const productsId = [
+  "product-one",
+  "product-two",
+  "product-three",
+  "product-four",
+];
+
 const popupWrapper = $(".custom-model-main");
 const popupContent = $(".pop-up-content");
 
 $(".pop-up-click").on("click", (e) => {
-  const contentKeys = Object.keys(content);
+  const contentKeys = Object.keys(categoryContent);
 
   popupWrapper.addClass("model-open");
+
   contentKeys.forEach((i) => {
     if (e.target.id === i) {
-      popupContent.append(content[i]);
+      popupContent.append(categoryContent[i]);
+    }
+  });
+
+  productsId.forEach((i) => {
+    if (e.target.id === i) {
+      popupContent.append(productContent(productContentOne));
     }
   });
 });
