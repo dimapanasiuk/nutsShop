@@ -10182,3 +10182,26 @@ textarea.form-control {
 .table-header_last-item {
  border: none;
 }
+
+
+.subscribe-form {
+  display: grid;
+}
+
+.subscribe-form input {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.submit-button {
+  background-color: #82ae46;
+  border: none;
+  
+  padding: 5px 15px;
+  color: white;
+}
