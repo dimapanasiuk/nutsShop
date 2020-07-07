@@ -9395,7 +9395,6 @@ textarea.form-control {
   .testimony-section .owl-carousel {
     margin: 0; }
   .testimony-section .owl-carousel .owl-stage-outer {
-    padding-bottom: 2em;
     position: relative; }
   .testimony-section .owl-nav {
     position: absolute;
@@ -10230,4 +10229,29 @@ textarea.form-control {
 
 .contacts-whatsapp {
   background-color: #4FD4AD;
+}
+
+
+.category-layout {
+  display: flex;
+}
+
+.delivery {
+  display: flex;
+  width: 50%;
+  margin: 0 40px;
+}
+
+.delivery-img {
+  position: absolute !important;
+  height: 80%;
+  bottom: 0;
+}
+
+.owl-stage-outer {
+  max-height: 350px;
+}
+
+.product-content {
+  display: flex;
 }

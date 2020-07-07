@@ -36,7 +36,6 @@ $(".pop-up-click").on("click", (e) => {
       popupContent.append(categoryContent[i]);
     }
   });
-
   productsId.forEach((i) => {
     if (e.target.id === i) {
       popupContent.append(productContent(productContentOne));
