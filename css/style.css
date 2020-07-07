@@ -10265,5 +10265,14 @@ textarea.form-control {
 }
 
 .contacts-social-list  {
-  
+  margin: 10px 0px ;
+}
+
+.contacts-form-title {
+  margin-bottom: 10px !important;
+}
+
+.contacts-info {
+  display: block;
+  margin-bottom: 20px;
 }
