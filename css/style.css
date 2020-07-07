@@ -10214,22 +10214,30 @@ textarea.form-control {
 .contacts-viber,
 .contacts-telegram,
 .contacts-whatsapp {
-  background-color: #A593E0;
+  background-color: #9069ae;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 20px;
 }
 
 .contacts-telegram {
-  background-color: #2CA5E0;
+  background-color: #34abe5;
 }
 
 .contacts-whatsapp {
-  background-color: #4FD4AD;
+  background-color: #31d349;
 }
+
+.contacts-viber:hover,
+.contacts-telegram:hover,
+.contacts-whatsapp:hover {
+  opacity: 0.8;
+}
+
 
 
 .category-layout {
@@ -10248,10 +10256,14 @@ textarea.form-control {
   bottom: 0;
 }
 
-.owl-stage-outer {
+/* .owl-stage-outer {
   max-height: 350px;
-}
+} */
 
 .product-content {
   display: flex;
+}
+
+.contacts-social-list  {
+  
 }

@@ -16,12 +16,12 @@ const categoryContent = {
   "category-fifth": fifthCategoryContent,
 };
 
-const productsId = [
-  "product-one",
-  "product-two",
-  "product-three",
-  "product-four",
-];
+// const productsId = [
+//   "product-one",
+//   "product-two",
+//   "product-three",
+//   "product-four",
+// ];
 
 const popupWrapper = $(".custom-model-main");
 const popupContent = $(".pop-up-content");
@@ -34,11 +34,6 @@ $(".pop-up-click").on("click", (e) => {
   contentKeys.forEach((i) => {
     if (e.target.id === i) {
       popupContent.append(categoryContent[i]);
-    }
-  });
-  productsId.forEach((i) => {
-    if (e.target.id === i) {
-      popupContent.append(productContent(productContentOne));
     }
   });
 });
