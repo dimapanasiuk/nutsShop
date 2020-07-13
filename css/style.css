@@ -12480,7 +12480,7 @@ h5,
 .product {
   display: block;
   width: 100%;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   position: relative;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -14685,4 +14685,35 @@ textarea.form-control {
 .contacts-info {
   display: block;
   margin-bottom: 20px;
+}
+
+.nav-item-dropdown {
+  display: flex;
+}
+
+.dropdown-button {
+  box-shadow: none !important;
+}
+
+.dropdown-item:hover {
+  background-color: #82ae46 !important;
+  color: white !important;
+}
+
+.green-item {
+  background-color: #82ae46 !important;
+}
+
+.pop-up-click {
+  font-size: 18px !important;
+  color: white;
+  font-family: "Lora", Georgia, serif;
+}
+
+.product-margin {
+  margin-top: 40px;
+}
+
+.delivery-img  img{
+  height: 100%;
 }
