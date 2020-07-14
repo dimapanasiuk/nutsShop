@@ -1,19 +1,19 @@
 import {
-  firstCategoryContent,
-  secondCateContent,
-  thirdCategoryContent,
-  fourthCategoryContent,
-  fifthCategoryContent,
-  productContent,
-  productContentOne,
+    firstCategoryContent,
+    secondCateContent,
+    thirdCategoryContent,
+    fourthCategoryContent,
+    fifthCategoryContent,
+    productContent,
+    productContentOne,
 } from "./popupContent.mjs";
 
 const categoryContent = {
-  "category-first": firstCategoryContent,
-  "category-second": secondCateContent,
-  "category-third": thirdCategoryContent,
-  "category-fourth": fourthCategoryContent,
-  "category-fifth": fifthCategoryContent,
+    "category-first": firstCategoryContent,
+    "category-second": secondCateContent,
+    "category-third": thirdCategoryContent,
+    "category-fourth": fourthCategoryContent,
+    "category-fifth": fifthCategoryContent,
 };
 
 // const productsId = [
@@ -27,17 +27,17 @@ const popupWrapper = $(".custom-model-main");
 const popupContent = $(".pop-up-content");
 
 $(".pop-up-click").on("click", (e) => {
-  const contentKeys = Object.keys(categoryContent);
+    const contentKeys = Object.keys(categoryContent);
 
-  popupWrapper.addClass("model-open");
+    popupWrapper.addClass("model-open");
 
-  contentKeys.forEach((i) => {
-    if (e.target.id === i) {
-      popupContent.append(categoryContent[i]);
-    }
-  });
+    contentKeys.forEach((i) => {
+        if (e.target.id === i) {
+            popupContent.append(categoryContent[i]);
+        }
+    });
 });
-$(".close-btn, .bg-overlay").click(function () {
-  $(".custom-model-main").removeClass("model-open");
-  $("#content").remove();
+$(".close-btn, .bg-overlay").click(function() {
+    $(".custom-model-main").removeClass("model-open");
+    $("#content").remove();
 });
