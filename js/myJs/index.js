@@ -1,43 +1,36 @@
 import {
-    firstCategoryContent,
-    secondCateContent,
-    thirdCategoryContent,
-    fourthCategoryContent,
-    fifthCategoryContent,
-    productContent,
-    productContentOne,
+    delivery,
+    productionAria,
+    production,
+    quality,
+    laboratory,
 } from "./popupContent.mjs";
 
-const categoryContent = {
-    "category-first": firstCategoryContent,
-    "category-second": secondCateContent,
-    "category-third": thirdCategoryContent,
-    "category-fourth": fourthCategoryContent,
-    "category-fifth": fifthCategoryContent,
-};
+const categoriesContent = [
+    productionAria,
+    production,
+    delivery,
+    quality,
+    laboratory
+]
 
-// const productsId = [
-//   "product-one",
-//   "product-two",
-//   "product-three",
-//   "product-four",
-// ];
+const products = document.querySelectorAll('.product-images');
 
-const popupWrapper = $(".custom-model-main");
-const popupContent = $(".pop-up-content");
+//get language
+const language = document.body.getAttribute('id');
 
-$(".pop-up-click").on("click", (e) => {
-    const contentKeys = Object.keys(categoryContent);
+//pop up elements
+const popupWrapper = document.querySelector(".custom-model-main");
+const popupContent = document.querySelector(".pop-up-content");
+const closeButton = document.querySelector(".close-btn");
 
-    popupWrapper.addClass("model-open");
+products.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        popupWrapper.classList.add("model-open");
+        popupContent.innerHTML = categoriesContent[i][language];
+    })
+})
 
-    contentKeys.forEach((i) => {
-        if (e.target.id === i) {
-            popupContent.append(categoryContent[i]);
-        }
-    });
-});
-$(".close-btn, .bg-overlay").click(function() {
-    $(".custom-model-main").removeClass("model-open");
-    $("#content").remove();
-});
+closeButton.addEventListener('click', () => {
+    popupWrapper.classList.remove("model-open");
+})
