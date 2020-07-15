@@ -132,38 +132,44 @@ let laboratory = {
     </div>`
 };
 
-// let productContentOne = {
-//     tabeHeaderTittleFirst: "Пищевая ценность, 100г:",
-//     tabeHeaderTittleSecond: "эн. ценн. 875 ккал",
-//     tabelItemContentFirst: "белки 13,7 г",
-//     tabelItemContentSecond: "жиры 68,4 г",
-//     tabelItemContentThird: "углеводы 13,7 г",
-//     aboutFirst: "100 граммов орехов на треть удовлетворяют суточную потребность человеческого организма в белке.",
-//     aboutSecond: `Вода — 2,3 г; Тиамин (B1) — 0,4 мг; Рибофлавин (B2) — 0,2 мг; Аскорбиновая кислота (вит. С) — 0,8 мг;
-//      Витамин K — 53,9 мкг; Кальций — 16 мг; Железо — 5,5 мг; Магний — 251 мг; Фосфор — 575 мг; Калий — 597 мг; Цинк — 6,4 мг.`,
-// };
+let productContentRu = {
+    tabeHeaderTittleFirst: "Пищевая ценность, 100г:",
+    tabeHeaderTittleSecond: "эн. ценн. 875 ккал",
+    tabelItemContentFirst: "белки 13,7 г",
+    tabelItemContentSecond: "жиры 68,4 г",
+    tabelItemContentThird: "углеводы 13,7 г",
+    aboutFirst: "100 граммов орехов на треть удовлетворяют суточную потребность человеческого организма в белке.",
+    aboutSecond: `Вода — 2,3 г; Тиамин (B1) — 0,4 мг; Рибофлавин (B2) — 0,2 мг; Аскорбиновая кислота (вит. С) — 0,8 мг;
+     Витамин K — 53,9 мкг; Кальций — 16 мг; Железо — 5,5 мг; Магний — 251 мг; Фосфор — 575 мг; Калий — 597 мг; Цинк — 6,4 мг.`,
+};
 
-// let productContent = (content) => {
-//     return `
-//   <div id='content'>
-//     <ul class="table-header">
-//       <li class="table-header_item">${content.tabeHeaderTittleFirst}</li>
-//       <li class="table-header_item table-header_last-item">${content.tabeHeaderTittleSecond}</li>
-//     </ul>
-//     <ul class="table-content">
-//       <li class="table-content_item">${content.tabelItemContentFirst}</li>
-//       <li class="table-content_item">${content.tabelItemContentSecond}</li>
-//       <li class="table-content_item table-content_last-item">${content.tabelItemContentThird}</li>
-//     </ul>
-//     <p>
-//       ${content.aboutFirst}
-//     </p>
-//     <p> 
-//       ${content.aboutSecond}
-//     </p>
-// </di>
-// `;
-// };
+const contentHtmlRu = (content) => {
+    return `
+  <div id='content'>
+    <ul class="table-header">
+      <li class="table-header_item">${content.tabeHeaderTittleFirst}</li>
+      <li class="table-header_item table-header_last-item">${content.tabeHeaderTittleSecond}</li>
+    </ul>
+    <ul class="table-content">
+      <li class="table-content_item">${content.tabelItemContentFirst}</li>
+      <li class="table-content_item">${content.tabelItemContentSecond}</li>
+      <li class="table-content_item table-content_last-item">${content.tabelItemContentThird}</li>
+    </ul>
+    <p>
+      ${content.aboutFirst}
+    </p>
+    <p> 
+      ${content.aboutSecond}
+    </p>
+  </di>
+  `
+}
+
+let productContent = {
+    ru: contentHtmlRu(productContentRu),
+    en: contentHtmlRu(productContentRu),
+    pl: contentHtmlRu(productContentRu)
+};
 
 export {
     delivery,
@@ -171,6 +177,5 @@ export {
     production,
     quality,
     laboratory,
-    // productContent,
-    // productContentOne,
+    productContent
 };
