@@ -133,42 +133,97 @@ let laboratory = {
 };
 
 let productContentRu = {
-    tabeHeaderTittleFirst: "Пищевая ценность, 100г:",
-    tabeHeaderTittleSecond: "эн. ценн. 875 ккал",
-    tabelItemContentFirst: "белки 13,7 г",
-    tabelItemContentSecond: "жиры 68,4 г",
-    tabelItemContentThird: "углеводы 13,7 г",
-    aboutFirst: "100 граммов орехов на треть удовлетворяют суточную потребность человеческого организма в белке.",
-    aboutSecond: `Вода — 2,3 г; Тиамин (B1) — 0,4 мг; Рибофлавин (B2) — 0,2 мг; Аскорбиновая кислота (вит. С) — 0,8 мг;
-     Витамин K — 53,9 мкг; Кальций — 16 мг; Железо — 5,5 мг; Магний — 251 мг; Фосфор — 575 мг; Калий — 597 мг; Цинк — 6,4 мг.`,
+    tabeHeaderTittleFirst: "пищевая ценность<span class='table-content_percent'>100г</span>:",
+    tabeHeaderTittleSecond: "эн. ценн. <span class='table-content_percent'>875 ккал</span>",
+    tabelItemContentFirst: "белки <span class='table-content_percent'>13,7 г</span>",
+    tabelItemContentSecond: "жиры <span class='table-content_percent'>68,4 г</span>",
+    tabelItemContentThird: "углеводы <span class='table-content_percent'>13,7 г</span>",
+    aboutFirst: "<span class='table-content_percent'>100</span> граммов орехов на треть удовлетворяют суточную потребность человеческого организма в белке.",
+    aboutSecond: `Вода — <span class='table-content_percent'>2,3 г</span>;
+                  Тиамин (B1) — <span class='table-content_percent'> 0,4 мг</span>; 
+                  Рибофлавин (B2) — <span class='table-content_percent'>0,2 мг</span>;
+                  Аскорбиновая кислота (вит. С) — <span class='table-content_percent'>0,8 мг</span>;
+                  Витамин K — <span class='table-content_percent'>53,9 мкг</span>; 
+                  Кальций — <span class='table-content_percent'>16 мг</span>;
+                  Железо — <span class='table-content_percent'>5,5 мг</span>;
+                  Магний — <span class='table-content_percent'>251 мг</span>;
+                  Фосфор — <span class='table-content_percent'>575 мг</span>;
+                  Калий — <span class='table-content_percent'>597 мг</span>;
+                  Цинк — <span class='table-content_percent'>6,4 мг.</span>`,
 };
 
-const contentHtmlRu = (content) => {
+
+let productContentEn = {
+    tabeHeaderTittleFirst: "nutritional value<span class='table-content_percent'>100g</span>:",
+    tabeHeaderTittleSecond: "energy value <span class='table-content_percent'>875 ккал</span>",
+    tabelItemContentFirst: "proteins <span class='table-content_percent'>13,7 г</span>",
+    tabelItemContentSecond: "fats <span class='table-content_percent'>68,4 г</span>",
+    tabelItemContentThird: "carbohydrates <span class='table-content_percent'>13,7 г</span>",
+    aboutFirst: "<span class='table-content_percent'>100</span> 00 grams of nuts satisfy one third of the daily requirement for protein of the human body.",
+    aboutSecond: `
+    Water - <span class='table-content_percent'>2.3 g</span>;
+    Thiamine (B1) - <span class='table-content_percent'>0.4 mg</span>;
+    Riboflavin (B2) - <span class='table-content_percent'>0.2 mg</span>;
+    Ascorbic acid (Vit. C) - <span class='table-content_percent'>0.8 mg</span>;
+    Vitamin K - <span class='table-content_percent'>53.9 mcg</span>;
+    Calcium - <span class='table-content_percent'>16 mg</span>;
+    Iron - <span class='table-content_percent'>5.5 mg</span>;
+    Magnesium - <span class='table-content_percent'>251 mg</span>;
+    Phosphorus - <span class='table-content_percent'>575 mg</span>;
+    Potassium - <span class='table-content_percent'>597 mg</span>;
+    Zinc - <span class='table-content_percent'>6.4 mg</span>.
+    `,
+};
+
+
+let productContentPl = {
+    tabeHeaderTittleFirst: "wartość odżywcza <span class='table-content_percent'>100г</span>:",
+    tabeHeaderTittleSecond: "wartość energetyczna <span class='table-content_percent'>875 ккал</span>",
+    tabelItemContentFirst: "białko <span class='table-content_percent'>13,7 г</span>",
+    tabelItemContentSecond: "tłuszcze <span class='table-content_percent'>68,4 г</span>",
+    tabelItemContentThird: "węglowodany <span class='table-content_percent'>13,7 г</span>",
+    aboutFirst: "<span class='table-content_percent'>100</span> gramów orzechów na jedną trzecią zaspokaja dzienne zapotrzebowanie organizmu na białko.",
+    aboutSecond: `
+    Woda - <span class='table-content_percent'>2,3 g</span>;
+    Tiamina (B1) - <span class='table-content_percent'>0,4 mg</span>;
+    Ryboflawina (B2) - <span class='table-content_percent'>0,2 mg</span>;
+    Kwas askorbinowy (wit. C) - <span class='table-content_percent'>0,8 mg</span>;
+    Witamina K - <span class='table-content_percent'>53,9 mcg</span>;
+    Wapń - <span class='table-content_percent'>16 mg</span>;
+    Żelazo - <span class='table-content_percent'>5,5 mg</span>;
+    Magnez - <span class='table-content_percent'>251 mg</span>;
+    Fosfor - <span class='table-content_percent'>575 mg</span>;
+    Potas - <span class='table-content_percent'>597 mg</span>;
+    Cynk - <span class='table-content_percent'>6,4 mg</span>.`,
+};
+
+const contentHtml = (content) => {
     return `
-  <div id='content'>
-    <ul class="table-header">
-      <li class="table-header_item">${content.tabeHeaderTittleFirst}</li>
-      <li class="table-header_item table-header_last-item">${content.tabeHeaderTittleSecond}</li>
-    </ul>
-    <ul class="table-content">
-      <li class="table-content_item">${content.tabelItemContentFirst}</li>
-      <li class="table-content_item">${content.tabelItemContentSecond}</li>
-      <li class="table-content_item table-content_last-item">${content.tabelItemContentThird}</li>
-    </ul>
-    <p>
-      ${content.aboutFirst}
-    </p>
-    <p> 
-      ${content.aboutSecond}
-    </p>
-  </di>
-  `
+<div id='content'>
+<ul class="table-header">
+  <li class="table-header_item"><h5>${content.tabeHeaderTittleFirst}</h5></li>
+  <li class="table-header_item table-header_last-item"><h5>${content.tabeHeaderTittleSecond}</h5></li>
+</ul>
+<ul class="table-content">
+  <li class="table-content_item"><h5>${content.tabelItemContentFirst}</h5></li>
+  <li class="table-content_item"><h5>${content.tabelItemContentSecond}</h5></li>
+  <li class="table-content_item table-content_last-item"><h5>${content.tabelItemContentThird}<h5></li>
+</ul>
+<h5 class='nut-product-head'>
+  ${content.aboutFirst}
+</h5>
+<p> 
+  ${content.aboutSecond}
+</p>
+</di>
+`
 }
 
+
 let productContent = {
-    ru: contentHtmlRu(productContentRu),
-    en: contentHtmlRu(productContentRu),
-    pl: contentHtmlRu(productContentRu)
+    ru: contentHtml(productContentRu),
+    en: contentHtml(productContentEn),
+    pl: contentHtml(productContentPl)
 };
 
 export {

@@ -13903,6 +13903,21 @@ textarea.form-control {
     margin-top: 40px;
 }
 
+.delivery-img {
+    height: 90%;
+}
+
 .delivery-img img {
     height: 100%;
+}
+
+.nut-product-head {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 4px;
+    background: #dedede;
+}
+
+.table-content_percent {
+    font-weight: 600;
 }
