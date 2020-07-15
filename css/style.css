@@ -12445,6 +12445,15 @@ textarea.form-control {
     position: relative;
 }
 
+.health {
+    background-image: url('../images/bg_3.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bg_3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
+
 .ftco-no-pt {
     padding-top: 0 !important;
 }
@@ -13802,7 +13811,8 @@ textarea.form-control {
     background-color: #82ae46;
     border: none;
     padding: 5px 15px;
-    color: white;
+    color: white!important;
+    font-weight: 800;
 }
 
 .contacts-social-list {
@@ -13921,3 +13931,56 @@ textarea.form-control {
 .table-content_percent {
     font-weight: 600;
 }
+
+.mob-version {
+    display: none;
+}
+
+.btn-group {
+    background-color: white;
+    border-radius: 50px;
+}
+
+@media only screen and (max-device-width:768px) {
+    .hero {
+        display: none;
+    }
+    .mob-version {
+        display: block;
+    }
+    .category-layout {
+        flex-direction: column;
+    }
+    .product-images img {
+        width: 100%;
+    }
+    .delivery {
+        display: none;
+    }
+    .slider-item {
+        display: none;
+    }
+    .mob-version-home {
+        top: 100px;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bg_1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top;
+        height: 100vh;
+    }
+    .mob-version_title {
+        color: white;
+        font-family: "Amatic SC", cursive;
+        font-size: 4rem;
+    }
+    .mob-version_small-title {
+        color: white;
+        font-size: 1.5rem;
+    }
+    .health p {
+        color: white;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {}
