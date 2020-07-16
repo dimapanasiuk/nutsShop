@@ -460,6 +460,14 @@
         <div class="bg-overlay"></div>
     </div>
 
+    <div class="form">
+        <p>Оставьте ваши контакты и наш консультант свяжется с вами </p>
+        <form method="post" action="" id="formMain">
+            <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" />
+            <input id="telephone" type="text" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" />
+            <div id="messegeResult"><input class="btn" id="button" type="button" value="Отправить" onclick="AjaxFormRequest('messegeResult', 'formMain', 'zakaz.php')" /></div>
+        </form>
+    </div>
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
@@ -482,6 +490,28 @@
 
     <script type="module" src="js/myJs/index.js"></script>
 
+    <script type="text/javascript">
+        function AjaxFormRequest(result_id, formMain, url) {
+            jQuery.ajax({
+                url: url,
+                type: "POST",
+                dataType: "html",
+                data: jQuery("#" + formMain).serialize(),
+                success: function(response) {
+                    document.getElementById(result_id).innerHTML = response;
+                },
+                error: function(response) {
+                    document.getElementById(result_id).innerHTML = "<p>Возникла ошибка при отправке формы. Попробуйте еще раз</p>";
+                }
+            });
+
+            $(':input', '#formMain')
+                .not(':button, :submit, :reset, :hidden')
+                .val('')
+                .removeAttr('checked')
+                .removeAttr('selected');
+        }
+    </script>
 
 </body>
 
