@@ -13962,7 +13962,8 @@ textarea.form-control {
         display: none;
     }
     .mob-version-home {
-        top: 100px;
+        /* top: 100px; */
+        padding-top: 100px;
         background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bg_1.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -13984,4 +13985,16 @@ textarea.form-control {
     }
 }
 
-@media only screen and (max-device-width: 480px) {}
+@media only screen and (max-device-width: 480px) {
+    .mob-version-home {
+        padding-top: 60px;
+    }
+    .mob-version_small-title {
+        font-size: 1rem;
+    }
+    .btn.btn-primary {
+        font-size: 14px;
+        width: 120%;
+        padding: 11px;
+    }
+}
