@@ -155,7 +155,7 @@ let productContentRu = {
 
 let productContentEn = {
     tabeHeaderTittleFirst: "nutritional value<span class='table-content_percent'>100 g</span>:",
-    tabeHeaderTittleSecond: "energy value <span class='table-content_percent'>875 kkal</span>",
+    tabeHeaderTittleSecond: "energy value <span class='table-content_percent'>875 cal</span>",
     tabelItemContentFirst: "proteins <span class='table-content_percent'>13,7 g</span>",
     tabelItemContentSecond: "fats <span class='table-content_percent'>68,4 g</span>",
     tabelItemContentThird: "carbohydrates <span class='table-content_percent'>13,7 g</span>",
