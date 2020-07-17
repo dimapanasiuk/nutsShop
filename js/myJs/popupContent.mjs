@@ -133,7 +133,7 @@ let laboratory = {
 };
 
 let productContentRu = {
-    tabeHeaderTittleFirst: "пищевая ценность<span class='table-content_percent'>100г</span>:",
+    tabeHeaderTittleFirst: "пищевая ценность<span class='table-content_percent'>100 г</span>:",
     tabeHeaderTittleSecond: "эн. ценн. <span class='table-content_percent'>875 ккал</span>",
     tabelItemContentFirst: "белки <span class='table-content_percent'>13,7 г</span>",
     tabelItemContentSecond: "жиры <span class='table-content_percent'>68,4 г</span>",
@@ -154,11 +154,11 @@ let productContentRu = {
 
 
 let productContentEn = {
-    tabeHeaderTittleFirst: "nutritional value<span class='table-content_percent'>100g</span>:",
-    tabeHeaderTittleSecond: "energy value <span class='table-content_percent'>875 ккал</span>",
-    tabelItemContentFirst: "proteins <span class='table-content_percent'>13,7 г</span>",
-    tabelItemContentSecond: "fats <span class='table-content_percent'>68,4 г</span>",
-    tabelItemContentThird: "carbohydrates <span class='table-content_percent'>13,7 г</span>",
+    tabeHeaderTittleFirst: "nutritional value<span class='table-content_percent'>100 g</span>:",
+    tabeHeaderTittleSecond: "energy value <span class='table-content_percent'>875 kkal</span>",
+    tabelItemContentFirst: "proteins <span class='table-content_percent'>13,7 g</span>",
+    tabelItemContentSecond: "fats <span class='table-content_percent'>68,4 g</span>",
+    tabelItemContentThird: "carbohydrates <span class='table-content_percent'>13,7 g</span>",
     aboutFirst: "<span class='table-content_percent'>100</span> 00 grams of nuts satisfy one third of the daily requirement for protein of the human body.",
     aboutSecond: `
     Water - <span class='table-content_percent'>2.3 g</span>;
@@ -177,11 +177,11 @@ let productContentEn = {
 
 
 let productContentPl = {
-    tabeHeaderTittleFirst: "wartość odżywcza <span class='table-content_percent'>100г</span>:",
-    tabeHeaderTittleSecond: "wartość energetyczna <span class='table-content_percent'>875 ккал</span>",
-    tabelItemContentFirst: "białko <span class='table-content_percent'>13,7 г</span>",
-    tabelItemContentSecond: "tłuszcze <span class='table-content_percent'>68,4 г</span>",
-    tabelItemContentThird: "węglowodany <span class='table-content_percent'>13,7 г</span>",
+    tabeHeaderTittleFirst: "wartość odżywcza <span class='table-content_percent'>100 g</span>:",
+    tabeHeaderTittleSecond: "wartość energetyczna <span class='table-content_percent'>875 kkal</span>",
+    tabelItemContentFirst: "białko <span class='table-content_percent'>13,7 g</span>",
+    tabelItemContentSecond: "tłuszcze <span class='table-content_percent'>68,4 g</span>",
+    tabelItemContentThird: "węglowodany <span class='table-content_percent'>13,7 g</span>",
     aboutFirst: "<span class='table-content_percent'>100</span> gramów orzechów na jedną trzecią zaspokaja dzienne zapotrzebowanie organizmu na białko.",
     aboutSecond: `
     Woda - <span class='table-content_percent'>2,3 g</span>;
